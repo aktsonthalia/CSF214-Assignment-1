@@ -14,10 +14,7 @@ edge(d,e).
 edge(e,f).
 edge(f,g).
 edge(g,h).
-edge(b,b).
-edge(a,a).
-findpath(X,Y,[X],0).
-findpath(X,Y,[Path|Z],L):- edge(Last|Z),findpath(X,Y,Path,L).
+findpath(X,Z,[Path|Z],L):- edge(Last,Z),findpath(X,Z,Path,L).
 append([],L,L).
 append([H|T],L2,[H|L3])  :-  append(T,L2,L3). 
 last(Path,Last).   
