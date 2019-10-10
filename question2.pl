@@ -35,3 +35,13 @@ isTriplicate(Element, List) :- occurences(List, Element, 0, N), N >= 3.
 has_triplicate([]) :- false.
 has_triplicate(X) :- member(X, Element), occurences(X, Element, 0, N), N >= 3, write(Element).
 
+
+
+obtain_nth([H|T], N, I, Element) :- (I is N, Element is H); (I_updated is I+1), obtain_nth(T, N, I_updated, Element).
+
+remove_nth(N, X, Y) :- len(X, L), L>=N, N1 is N-1, N2 is L - N,
+						prefix(SubList1, X), len(SubList1, N1),
+						suffix(SubList2, X), len(SubList2, N2),
+						append(SubList1, SubList2, Y).
+							
+
