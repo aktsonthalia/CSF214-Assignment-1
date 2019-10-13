@@ -28,10 +28,10 @@ has_duplicate(X) :-
 				% 'X_without_repitition' is the set consisting of all elements of 'X'.
 				remove_duplicates(X, [], X_without_repitition), 
 
-				% 'X_without_repitition' contains 'Element'
+				% 'X_without_repitition' contains 'Element'.
 				member(X_without_repitition, Element), 
 
-				% 'N' is the number of occurences of 'Element' in 'X'
+				% 'N' is the number of occurences of 'Element' in 'X'.
 				occurences(X, Element, 0, N),
 				
 				% 'has_duplicate/1' evaluates to 'true' only if the following condition holds. 
