@@ -1,42 +1,34 @@
+
 :-style_check(-singleton).
+
+% Importing Utility Predicates
 :- ['../Utils.pl'].
-:- ['Sublist.pl'].
 
-% ############################################################################################
+% ####################################################################################################################			
 
-% len/2 evaluates the length of a given list.
-len([], 0).
+% prefix/2 checks if the first argument is prefix of the second argument.
 
-len([_|T], N) :-
+% An empty list is a prefix of every list.
+prefix(X, Y) :- append_(X, _, Y).		
+% ####################################################################################################################			
 
-			% One element of the list is taken and eliminated at a time.
-			len(T, X), 
-			% At the same time, this element is accounted for by the following clause.
-			N is X+1.
+reverse([], []).
+reverse([H|T], L2) :- 
+		reverse(T, L3),
+		append_(L3, [H], L2).
+		
+% ####################################################################################################################			
 
-% ############################################################################################
+suffix(X, Y) :- append_(_, X, Y).
 
-% remove_nth/3 removes the nth element of 'X' and stores the resultant list in 'Y'.
+% ####################################################################################################################			
 
-remove_nth(N, X, Y) :-
+sublist(X, Y) :- 
 
-			% 'L' is the length of the list 'X'.
-			len(X, L), 
+		suffix(Suffix, Y),
+		prefix(X, Suffix);
 
-			% Length of the list has to be greater than N for this predicate to evaluate to true.
-			L>=N, 
-			N1 is N-1, 
-			N2 is L - N,
+		write('false.').
+		
 
-			% 'SubList1' is the part of the list that comes before the nth element.
-			prefix(SubList1, X), 
-			len(SubList1, N1),
-
-			% 'SubList2' is the part of the list that comes after the nth element.
-			suffix(SubList2, X), 
-			len(SubList2, N2),
-
-			% The final result is obtained by appending 'SubList2' to 'SubList1'.
-			append(SubList1, SubList2, Y).
-
-% ################################################################################################
+% ####################################################################################################################			
