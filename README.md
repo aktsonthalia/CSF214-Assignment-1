@@ -10,5 +10,5 @@ test cases for
  
  zip files
  
-  
-  
+ Add all the test case files to a separate directory  
+
