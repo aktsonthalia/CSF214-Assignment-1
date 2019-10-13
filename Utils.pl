@@ -32,10 +32,11 @@ occurences([], Element, N, N).
 
 % The accumulator 'N' gets incremented by 1 each time 'Element' is encountered.
 occurences([H|T], Element, N, Res) :- 
-			(N_updated is N+1, H = Element) ; 
-			N_updated is N, 
-			not(H = Element)), 
-			occurences(T, Element, N_updated, Res).
+			((N_updated is N+1, 
+			 H = Element) ; 
+			 N_updated is N, 
+			 not(H = Element)), 
+			 occurences(T, Element, N_updated, Res).
 
 % ####################################################################################################################			
 
