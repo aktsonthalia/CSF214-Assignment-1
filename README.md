@@ -152,7 +152,7 @@ false.
 
 sublist/2 stores if the list X (first argument) is a sublist of the list Y (the second argument). If yes, it returns <code>true</code>, otherwise <code>false</code>.
 
-<h3 Test Cases </h3>
+<h3> Test Cases </h3> 
 
 <pre>
 ?- sublist([a, c], [a, b, c]).
