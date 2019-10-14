@@ -5,9 +5,11 @@ remaining :
 test cases for
   findpath
   
- add instructions
- 
- zip files
- 
- Add all the test case files to a separate directory  
+<h1> Instructions on Running and Testing the Code in this Project </h1>
+
+<h2> Requirements </h2>
+
+A working installation of <a href="https://www.swi-prolog.org/">SWI-Prolog</a> is needed to successfully execute the code in this project. 
+
+
 
