@@ -1,10 +1,10 @@
 <h1> Logic in Computer Science (CS F214)</h1>
 <h3> Assignment 1 <h3>
 
-  - Ankit Sonthalia <div style="text-align:center">2017B4A70468P</div>  
-  - Rahil N Jain  <div style="text-align:center">2017B4A70541P</div>   
-  - Nayan Khanna  <div style="text-align:center">2017B4A70636P</div>
-
+  - Ankit Sonthalia (2017B4A70468P)  
+  - Rahil N Jain (2017B4A70541P)
+  - Nayan Khanna (2017B4A70636P)
+<br>
   
 <h2> Instructions on Running and Testing the Code in this Project </h2>
 
@@ -60,7 +60,8 @@ fact in the background.
 
 The rest of this file contains working test cases for each of the files, and further guidelines wherever needed.
 
-<h2> Find_Path </h2>
+<h1> Question 1 </h1>
+<h2> Find_path.pl </h2>
 
 find_path/4 checks if there is a path between Vertex 1 (the first argument) and Vertex 2 (the second argument) and stores  
 the same in Path (the third argument). It stores the corresponding sum of costs of all the edges inside the path in the  
@@ -124,7 +125,7 @@ There exists no path between <code>a</code> and <code>i</code> and hence evaluat
 false.
 </pre>
 
-
+<h3> Question 2</h2>
 <h2> Sublist.pl </h2>
 
 sublist/2 stores if the list X (first argument) is a sublist of the list Y (the second argument). If yes, it returns <code>true</code>, otherwise <code>false</code>.
