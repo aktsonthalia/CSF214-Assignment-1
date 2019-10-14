@@ -24,9 +24,23 @@ A working installation of <a href="https://www.swi-prolog.org/">SWI-Prolog</a> i
     <br> <pre> consult('Question 2/Has_triplicate.pl'). </pre>
     <br> <pre> consult('Question 2/Remove_nth.pl'). </pre>
     <br> <pre> consult('Question 2/Remove_every_other.pl'). </pre>
+  <li> Once a particular .pl file is loaded, all of its predicates can be evaluated for different inputs by typing them into the terminal.<li>
     
+  
 
-<h2> Find Path </h2>
+<h2> Precautionary Note </h2>
+
+In Prolog, anything of the form <code>foo(A, B, C)</code> is a <strong>predicate</strong>. Given values of A, B, and C, it checks if A, B and C satisfy the constraints specific to this particular predicate and returns <code>true</code> if they do; otherwise, it returns <code>false</code>. In case one or more of these values is not supplied, it tries to satisfy the constraints anyway by puttting in different values to replace the variables.
+
+Hence, when we say a particular predicate _evaluates_ something, what we really mean is that given a set of variables out of which one of more do not have preset values, it tries to assign values to these unknownn variables so as to satisfy the given constraints. The test cases described in the later half of this README.md bear this very important fact in the background.
+
+The rest of this file contains working test cases for each of the files, and further guidelines wherever needed.
+
+<h2> Find_Path </h2>
+
+find_path/4 checks if there is a path between Vertex 1 (the first argument) and Vertex 2 (the second argument) and stores the same in Path (the third argument). It stores the corresponding sum of costs of all the edges inside the path in the variable Sum. On each press of the semicolon (;), it prints out alternate paths. After exhausting all such alternate paths, it prints out 'false' and terminates.
+
+<h3> Test Cases </h3>
 
 <pre>
 ?- find_path(a, b, Path, Sum).
@@ -120,7 +134,12 @@ false.
 </pre>
 
 
-<h2> Sublist </h2>
+<h2> Sublist.pl </h2>
+
+sublist/2 stores if the list X (first argument) is a sublist of the list Y (the second argument). If yes, it returns <code>true</code>, otherwise <code>false</code>.
+
+<h3 Test Cases </h3>
+
 <pre>
 ?- sublist([a, c], [a, b, c]).
 false.
@@ -136,7 +155,12 @@ true.
 true.
 </pre>
 
-<h2> Has Triplicate </h2>
+<h2> Has_Triplicate.pl </h2>
+
+has_triplicate/1 returns <code>true</code> if the given list has three or more than three occurences of an element. Further, it prints out the corresponding element. On each press of a semicolon, alternate such elements are printed out. Once no such element remains, the program prints out <code>false</code> and terminates.
+
+<h3> Test Cases </h3>
+
 <pre>
 ?- has_triplicate([1, 1, 2, 3, 4, 1, 2, 3, 4, 5, 6, 2, 3]).
 1
@@ -160,7 +184,11 @@ false.
 false.
 </pre>
 
-<h2> Remove Nth </h2>
+<h2> Remove_Nth.pl </h2>
+
+remove_nth/3 creates a list Y (the third argument), which is the list X (second argument), with its Nth element removed. The number 'N'(first argument) is supplied by the user at run time. If an Nth element does not exist for the given list, the program returns <code>false</code> and terminates.
+
+<h3> Test Cases </h3>
 <pre>
 ?- remove_nth(3, [1, 2, 3, 4, 5, 6], Y).
 Y = [1, 2, 4, 5, 6].
@@ -181,7 +209,10 @@ Y = [a, b, c, d, 1, 2, 4].
 false.
 </pre>
 
-<h2> Remove Every Other </h2>
+
+<h2> Remove_every_other.pl </h2>
+
+remove_every_other/2 removes every even-indexed element from the list X(first argument) and puts the resultant element in the list Y (second argument). The first element is always retained. Indexing starts at 1.
 
 <pre>
 ?- remove_every_other([1, 2, 3, 4, 5, 6, 7], Y).
