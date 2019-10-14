@@ -13,32 +13,46 @@ A working installation of <a href="https://www.swi-prolog.org/">SWI-Prolog</a> i
 
 <h2> Step-Wise Instructions </h2>
 
-<ol>
-  <li> After unzipping the <pre>.zip</pre> file, open a terminal and navigate to the directory containing this <pre>README.md</file>, i.e., navigate to the same directory level as this current file. <li>
-  <li> Some of the predicates in the subsequent directories draw dependencies from <pre>Utils.pl</pre>, and are required to reference the same using its current location. Therefore, please take special care to not make any changes to the existing directory structure.</li>
-  <li> After completing <span><pre>Step 1</pre><span>, start Prolog in the terminal. The command <pre>prolog</pre> accomplishes the same in most Linux distributions.</li>
-  <li> For executing the code for Question 1, type the following and press <pre>Enter</pre>.
-    <br> <pre> consult('Question 1/Find_path.pl'). </pre> </li>
-  <li> Similarly, for executing the code for Question 1, type the following into the Prolog terminal, depending on which of the four subparts of the question you wish to view.
-    <br> <pre> consult('Question 2/Sublist.pl'). </pre>
-    <br> <pre> consult('Question 2/Has_triplicate.pl'). </pre>
-    <br> <pre> consult('Question 2/Remove_nth.pl'). </pre>
-    <br> <pre> consult('Question 2/Remove_every_other.pl'). </pre>
-  <li> Once a particular .pl file is loaded, all of its predicates can be evaluated for different inputs by typing them into the terminal.<li>
+  - After unzipping the ` .zip ` file, open a terminal and navigate to the directory containing this README.md file,   
+  i.e., navigate to the same directory level as this file.
+  - Some of the predicates in the subsequent directories draw dependencies from `Utils.pl`, and are required to reference  
+  the same using its current location.  
+  Therefore, please take special care to not make any changes to the existing directory structure.
+  - After completing `Step 1`, start Prolog in the terminal. The command `prolog` accomplishes the same in most  
+  Linux  distributions.
+  - For executing the code for Question 1, type the following and press `Enter`.
+    <pre>`consult('Question 1/Find_path.pl').</pre> 
+  - Similarly, for executing the code for Question 2, type the following into the Prolog terminal, depending on which  
+  of the four subparts of the question you wish to view.
+    <pre>consult('Question 2/Sublist.pl').</pre>
+    <pre>consult('Question 2/Has_triplicate.pl').</pre>
+    <pre>consult('Question 2/Remove_nth.pl').</pre>
+    <pre>consult('Question 2/Remove_every_other.pl').</pre>
+  Once a particular .pl file is loaded, all of its predicates can be evaluated for different inputs by typing them into  
+  the terminal.
     
   
 
 <h2> Precautionary Note </h2>
 
-In Prolog, anything of the form <code>foo(A, B, C)</code> is a <strong>predicate</strong>. Given values of A, B, and C, it checks if A, B and C satisfy the constraints specific to this particular predicate and returns <code>true</code> if they do; otherwise, it returns <code>false</code>. In case one or more of these values is not supplied, it tries to satisfy the constraints anyway by puttting in different values to replace the variables.
+In Prolog, anything of the form <code>foo(A, B, C)</code> is a <strong>predicate</strong>. Given values of A, B, & C,   
+it checks if A, B and C satisfy the constraints specific to this particular predicate and returns <code>true</code>    
+if they do; otherwise, it returns <code>false</code>. In case one or more of these values is not supplied, it tries   
+to satisfy the constraints anyway by puttting in different values to replace the variables.  
 
-Hence, when we say a particular predicate _evaluates_ something, what we really mean is that given a set of variables out of which one of more do not have preset values, it tries to assign values to these unknownn variables so as to satisfy the given constraints. The test cases described in the later half of this README.md bear this very important fact in the background.
+Hence, when we say a particular predicate _evaluates_ something, what we really mean is that given a set of variables   
+out of which one of more do not have preset values, it tries to assign values to these unknownn variables so as to    
+satisfy the given constraints. The test cases described in the later half of this README.md bear this very important  
+fact in the background.
 
 The rest of this file contains working test cases for each of the files, and further guidelines wherever needed.
 
 <h2> Find_Path </h2>
 
-find_path/4 checks if there is a path between Vertex 1 (the first argument) and Vertex 2 (the second argument) and stores the same in Path (the third argument). It stores the corresponding sum of costs of all the edges inside the path in the variable Sum. On each press of the semicolon (;), it prints out alternate paths. After exhausting all such alternate paths, it prints out 'false' and terminates.
+find_path/4 checks if there is a path between Vertex 1 (the first argument) and Vertex 2 (the second argument) and stores  
+the same in Path (the third argument). It stores the corresponding sum of costs of all the edges inside the path in the  
+variable Sum. On each press of the semicolon (;), it prints out alternate paths. After exhausting all such alternate  
+paths, it prints out 'false' and terminates.
 
 <h3> Test Cases </h3>
 
@@ -157,7 +171,9 @@ true.
 
 <h2> Has_Triplicate.pl </h2>
 
-has_triplicate/1 returns <code>true</code> if the given list has three or more than three occurences of an element. Further, it prints out the corresponding element. On each press of a semicolon, alternate such elements are printed out. Once no such element remains, the program prints out <code>false</code> and terminates.
+has_triplicate/1 returns <code>true</code> if the given list has three or more than three occurences of an element.  
+Further, it prints out the corresponding element. On each press of a semicolon, alternate such elements are printed  
+out. Once no such element remains, the program prints out <code>false</code> and terminates.
 
 <h3> Test Cases </h3>
 
@@ -186,7 +202,9 @@ false.
 
 <h2> Remove_Nth.pl </h2>
 
-remove_nth/3 creates a list Y (the third argument), which is the list X (second argument), with its Nth element removed. The number 'N'(first argument) is supplied by the user at run time. If an Nth element does not exist for the given list, the program returns <code>false</code> and terminates.
+remove_nth/3 creates a list Y (the third argument), which is the list X (second argument), with its Nth element  
+removed. The number 'N'(first argument) is supplied by the user at run time. If an Nth element does not exist  
+for the given list, the program returns <code>false</code> and terminates.
 
 <h3> Test Cases </h3>
 <pre>
@@ -212,7 +230,8 @@ false.
 
 <h2> Remove_every_other.pl </h2>
 
-remove_every_other/2 removes every even-indexed element from the list X(first argument) and puts the resultant element in the list Y (second argument). The first element is always retained. Indexing starts at 1.
+remove_every_other/2 removes every even-indexed element from the list X(first argument) and puts the resultant  
+element in the list Y (second argument). The first element is always retained. Indexing starts at 1.
 
 <pre>
 ?- remove_every_other([1, 2, 3, 4, 5, 6, 7], Y).
