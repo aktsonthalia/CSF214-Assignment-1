@@ -14,12 +14,12 @@ A working installation of <a href="https://www.swi-prolog.org/">SWI-Prolog</a> i
 
 <h2> Step-Wise Instructions </h2>
 
-  - After unzipping the ` .zip ` file, open a terminal and navigate to the directory containing this README.md file.
+  - After unzipping the <code> .zip </code> file, open a terminal and navigate to the directory containing this README.md file.
   ############ ISKO THEEEEEK KARO MADARCHOD
-  - Some of the predicates in the subsequent directories draw dependencies from `Utils.pl`, and are required to reference  
+  - Some of the predicates in the subsequent directories draw dependencies from <code>Utils.pl</code>, and are required to reference  
   the same using its current location.  
   Therefore, please take special care to not make any changes to the existing directory structure.
-  - After completing `Step 1`, start Prolog in the terminal. The command `prolog` or `swipl` accomplishes the same in most  
+  - After completing <code>Step 1</code>, start Prolog in the terminal. The command <code>prolog</code> or <code>swipl</code> accomplishes the same in most  
   Linux  distributions.
   - For running the functions, type the following in the terminal and press enter.
   <pre>prolog driver.pl</pre>
@@ -61,6 +61,7 @@ paths, it prints out 'false' and terminates.
 <h3> Test Cases </h3>
 
 <h5> TEST CASE 1 </h5>
+Lists all paths between <code>a</code> and <code>b</code> with appropriate weights.
 <pre>
 ?- find_path(a, b, Path, Sum).
 Path = [a, b],
@@ -99,6 +100,7 @@ false.
 </pre>
 
 <h5> TEST CASE 2 </h5>
+There exists only one path between <code>a</code> and <code>a</code>, which is <code>[a]</code> itself with weight <code>0</code>.
 <pre>
 ?- find_path(a, a, Path, Sum).
 Path = [a],
@@ -107,50 +109,9 @@ false.
 </pre>
 
 <h5> TEST CASE 3 </h5>
+There exists no path between <code>a</code> and <code>i</code> and hence evaluates to <code>false</code>.
 <pre>
-?- find_path(c, g, Path, Sum).
-Path = [c, d, e, f, g],
-Sum = 132 ;
-Path = [c, d, f, g],
-Sum = 327 ;
-Path = [c, d, a, g],
-Sum = 35 ;
-Path = [c, d, b, a, g],
-Sum = 286 ;
-Path = [c, e, f, g],
-Sum = 1073 ;
-Path = [c, e, f, d, a, g],
-Sum = 1283 ;
-Path = [c, e, f, d, b, a, g],
-Sum = 1534 ;
-Path = [c, e, d, f, g],
-Sum = 1278 ;
-Path = [c, e, d, a, g],
-Sum = 986 ;
-Path = [c, e, d, b, a, g],
-Sum = 1237 ;
-Path = [c, b, d, e, f, g],
-Sum = 383 ;
-Path = [c, b, d, f, g],
-Sum = 578 ;
-Path = [c, b, d, a, g],
-Sum = 286 ;
-Path = [c, b, a, g],
-Sum = 35 ;
-Path = [c, b, a, d, e, f, g],
-Sum = 142 ;
-Path = [c, b, a, d, f, g],
-Sum = 337 ;
-Path = [c, a, g],
-Sum = 30 ;
-Path = [c, a, b, d, e, f, g],
-Sum = 388 ;
-Path = [c, a, b, d, f, g],
-Sum = 583 ;
-Path = [c, a, d, e, f, g],
-Sum = 137 ;
-Path = [c, a, d, f, g],
-Sum = 332 ;
+?- find_path(a, i, Path, Sum).
 false.
 </pre>
 

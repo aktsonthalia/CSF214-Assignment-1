@@ -1,6 +1,7 @@
 :-style_check(-singleton).
 
 :- ['Utils.pl'].
+:- ['Question 1/Sample Graphs/graph1.pl'].
 :- ['Question 1/Find_path.pl'].
 :- ['Question 2/Sublist.pl'].
 :- ['Question 2/Has_triplicate.pl'].
