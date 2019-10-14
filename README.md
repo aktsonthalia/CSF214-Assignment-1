@@ -1,10 +1,10 @@
 <h1> Logic in Computer Science (CS F214)</h1>
 <h3> Assignment 1 <h3>
 
-  - Ankit Sonthalia <div style="text-align:center">2017B4A70468P</div>  
-  - Rahil N Jain  <div style="text-align:center">2017B4A70541P</div>   
-  - Nayan Khanna  <div style="text-align:center">2017B4A70636P</div>
-
+  - Ankit Sonthalia (2017B4A70468P)  
+  - Rahil N Jain (2017B4A70541P)
+  - Nayan Khanna (2017B4A70636P)
+<br>
   
 <h2> Instructions on Running and Testing the Code in this Project </h2>
 
