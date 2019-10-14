@@ -29,6 +29,8 @@ For built-in help, use ?- help(Topic). or ?- apropos(Word).
   - Some of the predicates in the subsequent directories draw dependencies from <code>Utils.pl</code>, and are required to reference  
   the same using its current location.  
   Therefore, please take special care to not make any changes to the existing directory structure.
+  - Shift to the project directory by typing this in the terminal and press enter.
+  <pre> cd CSF214-Assignment-1-master</pre>
   - For running the functions, type the following into the terminal and press enter.
   <pre>prolog driver.pl</pre>
   - If there are no errors, the following output will be produced.
