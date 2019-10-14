@@ -61,7 +61,7 @@ paths, it prints out 'false' and terminates.
 <h3> Test Cases </h3>
 
 <h5> TEST CASE 1 </h5>
-Lists all paths between <code>a</code> and <code>b</code> with appropriate weights.
+Lists all paths between <code>a</code> and <code>b</code> with appropriate weights.  
 <pre>
 ?- find_path(a, b, Path, Sum).
 Path = [a, b],
@@ -100,7 +100,7 @@ false.
 </pre>
 
 <h5> TEST CASE 2 </h5>
-There exists only one path between <code>a</code> and <code>a</code>, which is <code>[a]</code> itself with weight <code>0</code>.
+There exists only one path between <code>a</code> and <code>a</code>, which is <code>[a]</code> itself with weight <code>0</code>.  
 <pre>
 ?- find_path(a, a, Path, Sum).
 Path = [a],
@@ -109,7 +109,7 @@ false.
 </pre>
 
 <h5> TEST CASE 3 </h5>
-There exists no path between <code>a</code> and <code>i</code> and hence evaluates to <code>false</code>.
+There exists no path between <code>a</code> and <code>i</code> and hence evaluates to <code>false</code>.  
 <pre>
 ?- find_path(a, i, Path, Sum).
 false.
@@ -123,39 +123,42 @@ sublist/2 stores if the list X (first argument) is a sublist of the list Y (the 
 <h3> Test Cases </h3> 
 
 <h5> TEST CASE 1 </h5>
+<code>[1, 2]</code> is a sublist of <code>[1, 2, 3, 4, 5]</code>.  
 <pre>
-?- sublist([a, c], [a, b, c]).
-false.
+?- sublist([1, 2], [1, 2, 3, 4, 5]).
+true .
 </pre>
 
 <h5> TEST CASE 2 </h5>
+<code>[1, 4]</code> is not a sublist of <code>[1, 2, 3, 4, 5]</code>.  
 <pre>
-?- sublist([a], [a, b, c]).
-true.
+?- sublist([1, 4], [1, 2, 3, 4, 5]).
+false.
 </pre>
 
 <h5> TEST CASE 3 </h5>
+<code>[]</code> is a sublist of every list including itself.  
 <pre>
-?- sublist([2, 3], [1, 2, 3, 4, 5]).
-true.
+?- sublist([], [1, 2, 3, 4, 5]).
+true .
+?- sublist([], []).
+true .
 </pre>
 
 <h2> Has_Triplicate.pl </h2>
 
 has_triplicate/1 returns <code>true</code> if the given list has three or more than three occurences of an element.  
-Further, it prints out the corresponding element. On each press of a semicolon, alternate such elements are printed  
+Further, it prints out the corresponding element. On each press of a **semicolon**, alternate such elements are printed  
 out. Once no such element remains, the program prints out <code>false</code> and terminates.
 
 <h3> Test Cases </h3>
 
 <h5> TEST CASE 1 </h5>
 <pre>
-?- has_triplicate([1, 1, 2, 3, 4, 1, 2, 3, 4, 5, 6, 2, 3]).
+?- has_triplicate([1, 1, 2, 3, 3, 2, 1, 2, 4]).
 1
 true ;
 2
-true ;
-3
 true ;
 false.
 </pre>
