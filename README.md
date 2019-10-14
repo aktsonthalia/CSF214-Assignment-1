@@ -11,6 +11,21 @@ test cases for
 
 A working installation of <a href="https://www.swi-prolog.org/">SWI-Prolog</a> is needed to successfully execute the code in this project. 
 
+<h2> Step-Wise Instructions </h2>
+
+<ol>
+  <li> After unzipping the <pre>.zip</pre> file, open a terminal and navigate to the directory containing this <pre>README.md</file>, i.e., navigate to the same directory level as this current file. <li>
+  <li> Some of the predicates in the subsequent directories draw dependencies from <pre>Utils.pl</pre>, and are required to reference the same using its current location. Therefore, please take special care to not make any changes to the existing directory structure.</li>
+  <li> After completing <span><pre>Step 1</pre><span>, start Prolog in the terminal. The command <pre>prolog</pre> accomplishes the same in most Linux distributions.</li>
+  <li> For executing the code for Question 1, type the following and press <pre>Enter</pre>.
+    <br> <pre> consult('Question 1/Find_path.pl'). </pre> </li>
+  <li> Similarly, for executing the code for Question 1, type the following into the Prolog terminal, depending on which of the four subparts of the question you wish to view.
+    <br> <pre> consult('Question 2/Sublist.pl'). </pre>
+    <br> <pre> consult('Question 2/Has_triplicate.pl'). </pre>
+    <br> <pre> consult('Question 2/Remove_nth.pl'). </pre>
+    <br> <pre> consult('Question 2/Remove_every_other.pl'). </pre>
+    
+
 <h2> Find Path </h2>
 
 <pre>
