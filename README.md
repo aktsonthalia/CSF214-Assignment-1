@@ -1,29 +1,37 @@
 <h1> Logic in Computer Science (CS F214)</h1>
 <h3> Assignment 1 <h3>
 
-  - Ankit Sonthalia (2017B4A70468P)  
-  - Rahil N Jain (2017B4A70541P)   
-  - Nayan Khanna (2017B4A70636P)  
+  - Ankit Sonthalia <div style="text-align:center">2017B4A70468P</div>  
+  - Rahil N Jain  <div style="text-align:center">2017B4A70541P</div>   
+  - Nayan Khanna  <div style="text-align:center">2017B4A70636P</div>
 
   
 <h2> Instructions on Running and Testing the Code in this Project </h2>
 
 <h3> Requirements </h3>
 
-A working installation of <a href="https://www.swi-prolog.org/">SWI-Prolog</a> is needed to successfully execute the code in this project. 
+A working installation of <a href="https://www.swi-prolog.org/">SWI-Prolog</a> is needed to successfully execute the code in this project.  
+The command <code>prolog</code> or <code>swipl</code> accomplishes the same in most Linux distributions.  
+If Prolog has been installed properly, either of these commands will produce the following output.
+<pre>
+Welcome to SWI-Prolog (threaded, 64 bits, version 7.6.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit http://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- </pre>
 
 <h2> Step-Wise Instructions </h2>
 
-  - After unzipping the <code> .zip </code> file, open a terminal and navigate to the directory containing this README.md file.
-  ############ ISKO THEEEEEK KARO MADARCHOD
+  - After unzipping the <code> .zip </code> file, open a terminal and navigate to the directory containing this README.
   - Some of the predicates in the subsequent directories draw dependencies from <code>Utils.pl</code>, and are required to reference  
   the same using its current location.  
   Therefore, please take special care to not make any changes to the existing directory structure.
-  - After completing <code>Step 1</code>, start Prolog in the terminal. The command <code>prolog</code> or <code>swipl</code> accomplishes the same in most  
-  Linux  distributions.
-  - For running the functions, type the following in the terminal and press enter.
+  - For running the functions, type the following into the terminal and press enter.
   <pre>prolog driver.pl</pre>
-  - You should see the line __All Predicates imported Successfully!__ just like below:
+  - If there are no errors, the following output will be produced.
   <pre>
   All Predicates imported Successfully!
   Welcome to SWI-Prolog (threaded, 64 bits, version 7.6.4)
@@ -34,18 +42,19 @@ A working installation of <a href="https://www.swi-prolog.org/">SWI-Prolog</a> i
   For built-in help, use ?- help(Topic). or ?- apropos(Word).
 
   ?- </pre>
-  Once a particular .pl file is loaded, all of its predicates can be evaluated for different inputs by typing them into  
-  the terminal.
+
+  Any of the predicates in either of the directories <code>**Question1**</code> and <code>**Question 2**</code>, or in <code>**Utils.pl**</code>   
+  can now be invoked by using appropriate format.
     
 <h2> Precautionary Note </h2>
 
-In Prolog, anything of the form <code>foo(A, B, C)</code> is a <strong>predicate</strong>. Given values of A, B, & C, it checks  
-if A, B and C satisfy the constraints specific to this particular predicate and returns <code>true</code>      
-if they do; otherwise, it returns <code>false</code>. In case one or more of these values is not supplied, it tries   
-to satisfy the constraints anyway by puttting in different values to replace the variables.  
+In Prolog, anything of the form <code>foo(A, B, C)</code> is a <strong>predicate</strong>. Given values of A, B, & C, it checks if A, B and C  
+satisfy the constraints specific to this particular predicate and returns <code>true</code> if they do; otherwise, it returns <code>false</code>.  
+In case one or more of these values is not supplied, it tries to satisfy the constraints anyway by puttting in   
+different values to replace the variables.  
 
 Hence, when we say a particular predicate _evaluates_ something, what we really mean is that given a set of variables   
-out of which one of more do not have preset values, it tries to assign values to these unknownn variables so as to    
+out of which one of more do not have preset values, it tries to assign values to these unknown variables so as to    
 satisfy the given constraints. The test cases described in the later half of this README.md bear this very important  
 fact in the background.
 
@@ -55,8 +64,8 @@ The rest of this file contains working test cases for each of the files, and fur
 
 find_path/4 checks if there is a path between Vertex 1 (the first argument) and Vertex 2 (the second argument) and stores  
 the same in Path (the third argument). It stores the corresponding sum of costs of all the edges inside the path in the  
-variable Sum. On each press of the semicolon (;), it prints out alternate paths. After exhausting all such alternate  
-paths, it prints out 'false' and terminates.
+variable Sum. On each press of the **semicolon (;)**, it prints out alternate paths. After exhausting all such alternate  
+paths, it prints out <code>false</code> and terminates.
 
 <h3> Test Cases </h3>
 
