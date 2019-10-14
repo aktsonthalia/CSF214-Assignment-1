@@ -175,9 +175,10 @@ false.
 <pre>
 ?- has_triplicate([]).
 false.
-</pre>
+</pre>Nayan Khanna (2017B4A70636P)
 
-<h2> Remove_Nth.pl </h2>
+
+<h2> Remove_nth.pl </h2>
 
 remove_nth/3 creates a list Y (the third argument), which is the list X (second argument), with its Nth element  
 removed. The number 'N'(first argument) is supplied by the user at run time. If an Nth element does not exist  
@@ -185,24 +186,21 @@ for the given list, the program returns <code>false</code> and terminates.
 
 <h3> Test Cases </h3>
 <h5> TEST CASE 1 </h5>
+For valid <code>n</code>, the predicate works as expected.   
 <pre>
 ?- remove_nth(3, [1, 2, 3, 4, 5, 6], Y).
 Y = [1, 2, 4, 5, 6].
 </pre>
 
 <h5> TEST CASE 2 </h5>
+For invalid <code>n</code>, the predicate fails.   
 <pre>
 ?- remove_nth(7, [1, 2, 3, 4], Y).
 false.
 </pre>
 
 <h5> TEST CASE 3 </h5>
-<pre>
-?- remove_nth(7, [a, b, c, d, 1, 2, 3, 4], Y).
-Y = [a, b, c, d, 1, 2, 4].
-</pre>
-
-<h5> TEST CASE 4 </h5>
+An attempt to remove an element from an empty list fails.  
 <pre>
 ?- remove_nth(7, [], Y).
 false.
@@ -217,24 +215,23 @@ element in the list Y (second argument). The first element is always retained. I
 <h3> Test Cases </h3>
 
 <h5> TEST CASE 1 </h5>
+In the following two test cases, the predicate removes elements at <code>even</code> positions.  
 <pre>
 ?- remove_every_other([1, 2, 3, 4, 5, 6, 7], Y).
 Y = [1, 3, 5, 7] .
-</pre>
-
-<h5> TEST CASE 2 </h5>
-<pre>
 ?- remove_every_other([a, b, c, d, e, f], Y).
 Y = [a, c, e].
 </pre>
 
-<h5> TEST CASE 3 </h5>
+<h5> TEST CASE 2 </h5>
+No element is removed from a singleton list.  
 <pre>
 ?- remove_every_other([a], Y).
 Y = [a]
 </pre>
 
-<h5> TEST CASE 4 </h5>
+<h5> TEST CASE 3 </h5>
+No element is removed from an empty list.
 <pre>
 ?- remove_every_other([], Y).
 Y = [].
