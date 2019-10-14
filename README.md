@@ -1,14 +1,14 @@
 <h1> Logic in Computer Science (CS F214)</h1>
-<h2> Assignment 1 <h2>
+<h3> Assignment 1 <h3>
 
   - Ankit Sonthalia (2017B4A70468P)  
   - Rahil N Jain (2017B4A70541P)   
   - Nayan Khanna (2017B4A70636P)  
 
   
-<h1> Instructions on Running and Testing the Code in this Project </h1>
+<h2> Instructions on Running and Testing the Code in this Project </h2>
 
-<h2> Requirements </h2>
+<h3> Requirements </h3>
 
 A working installation of <a href="https://www.swi-prolog.org/">SWI-Prolog</a> is needed to successfully execute the code in this project. 
 
