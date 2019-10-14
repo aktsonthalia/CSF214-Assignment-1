@@ -1,9 +1,8 @@
 # Prolog-Assignment
 
-remaining : fix sublist.pl
+remaining : 
 
 test cases for
-  sublist
   findpath
   
  add instructions
