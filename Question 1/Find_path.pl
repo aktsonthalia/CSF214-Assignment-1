@@ -2,10 +2,6 @@
 
 :-style_check(-singleton).
 
-% Importing Utility Predicates
-:- ['../Utils.pl'].
-:- ['Sample Graphs/graph1.pl'].
-
 % ##############################################
 
 % Since this is an undirected graph, the edge predicate checks if two vertices are connected, regardless of the order 

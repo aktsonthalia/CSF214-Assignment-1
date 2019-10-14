@@ -1,9 +1,5 @@
 
 :-style_check(-singleton).
-
-
-:-style_check(-singleton).
-
 % ###########################			
 
 % prefix/2 checks if the first argument is prefix of the second argument.

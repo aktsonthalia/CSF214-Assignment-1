@@ -21,14 +21,19 @@ A working installation of <a href="https://www.swi-prolog.org/">SWI-Prolog</a> i
   Therefore, please take special care to not make any changes to the existing directory structure.
   - After completing `Step 1`, start Prolog in the terminal. The command `prolog` or `swipl` accomplishes the same in most  
   Linux  distributions.
-  - For executing the code for Question 1, type the following and press `Enter`.
-    <pre>`consult('Question 1/Find_path.pl').</pre> 
-  - Similarly, for executing the code for Question 2, type the following into the Prolog terminal, depending on which  
-  of the four subparts of the question you wish to view.
-    <pre>consult('Question 2/Sublist.pl').</pre>
-    <pre>consult('Question 2/Has_triplicate.pl').</pre>
-    <pre>consult('Question 2/Remove_nth.pl').</pre>
-    <pre>consult('Question 2/Remove_every_other.pl').</pre>
+  - For running the functions, type the following in the terminal and press enter.
+  <pre>prolog driver.pl</pre>
+  - You should see the line __All Predicates imported Successfully!__ just like below:
+  <pre>
+  All Predicates imported Successfully!
+  Welcome to SWI-Prolog (threaded, 64 bits, version 7.6.4)
+  SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+  Please run ?- license. for legal details.
+
+  For online help and background, visit http://www.swi-prolog.org
+  For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+  ?- </pre>
   Once a particular .pl file is loaded, all of its predicates can be evaluated for different inputs by typing them into  
   the terminal.
     
