@@ -1,9 +1,10 @@
-# Prolog-Assignment
+<h1> Logic in Computer Science (CS F214)</h1>
+<h2> Assignment 1 <h2>
 
-remaining : 
+  - Ankit Sonthalia (2017B4A70468P)  
+  - Rahil N Jain (2017B4A70541P)   
+  - Nayan Khanna (2017B4A70636P)  
 
-test cases for
-  findpath
   
 <h1> Instructions on Running and Testing the Code in this Project </h1>
 
@@ -13,12 +14,12 @@ A working installation of <a href="https://www.swi-prolog.org/">SWI-Prolog</a> i
 
 <h2> Step-Wise Instructions </h2>
 
-  - After unzipping the ` .zip ` file, open a terminal and navigate to the directory containing this README.md file,   
-  i.e., navigate to the same directory level as this file.
+  - After unzipping the ` .zip ` file, open a terminal and navigate to the directory containing this README.md file.
+  ############ ISKO THEEEEEK KARO MADARCHOD
   - Some of the predicates in the subsequent directories draw dependencies from `Utils.pl`, and are required to reference  
   the same using its current location.  
   Therefore, please take special care to not make any changes to the existing directory structure.
-  - After completing `Step 1`, start Prolog in the terminal. The command `prolog` accomplishes the same in most  
+  - After completing `Step 1`, start Prolog in the terminal. The command `prolog` or `swipl` accomplishes the same in most  
   Linux  distributions.
   - For executing the code for Question 1, type the following and press `Enter`.
     <pre>`consult('Question 1/Find_path.pl').</pre> 
@@ -31,12 +32,10 @@ A working installation of <a href="https://www.swi-prolog.org/">SWI-Prolog</a> i
   Once a particular .pl file is loaded, all of its predicates can be evaluated for different inputs by typing them into  
   the terminal.
     
-  
-
 <h2> Precautionary Note </h2>
 
-In Prolog, anything of the form <code>foo(A, B, C)</code> is a <strong>predicate</strong>. Given values of A, B, & C,   
-it checks if A, B and C satisfy the constraints specific to this particular predicate and returns <code>true</code>    
+In Prolog, anything of the form <code>foo(A, B, C)</code> is a <strong>predicate</strong>. Given values of A, B, & C, it checks  
+if A, B and C satisfy the constraints specific to this particular predicate and returns <code>true</code>      
 if they do; otherwise, it returns <code>false</code>. In case one or more of these values is not supplied, it tries   
 to satisfy the constraints anyway by puttting in different values to replace the variables.  
 
@@ -56,6 +55,7 @@ paths, it prints out 'false' and terminates.
 
 <h3> Test Cases </h3>
 
+<h5> TEST CASE 1 </h5>
 <pre>
 ?- find_path(a, b, Path, Sum).
 Path = [a, b],
@@ -93,6 +93,7 @@ Sum = 357 ;
 false.
 </pre>
 
+<h5> TEST CASE 2 </h5>
 <pre>
 ?- find_path(a, a, Path, Sum).
 Path = [a],
@@ -100,6 +101,7 @@ Sum = 0 ;
 false.
 </pre>
 
+<h5> TEST CASE 3 </h5>
 <pre>
 ?- find_path(c, g, Path, Sum).
 Path = [c, d, e, f, g],
@@ -154,16 +156,19 @@ sublist/2 stores if the list X (first argument) is a sublist of the list Y (the 
 
 <h3> Test Cases </h3> 
 
+<h5> TEST CASE 1 </h5>
 <pre>
 ?- sublist([a, c], [a, b, c]).
 false.
 </pre>
 
+<h5> TEST CASE 2 </h5>
 <pre>
 ?- sublist([a], [a, b, c]).
 true.
 </pre>
 
+<h5> TEST CASE 3 </h5>
 <pre>
 ?- sublist([2, 3], [1, 2, 3, 4, 5]).
 true.
@@ -177,6 +182,7 @@ out. Once no such element remains, the program prints out <code>false</code> and
 
 <h3> Test Cases </h3>
 
+<h5> TEST CASE 1 </h5>
 <pre>
 ?- has_triplicate([1, 1, 2, 3, 4, 1, 2, 3, 4, 5, 6, 2, 3]).
 1
@@ -188,6 +194,7 @@ true ;
 false.
 </pre>
 
+<h5> TEST CASE 2 </h5>
 <pre>
 ?- has_triplicate([a, b, c, d, e, a, b, c, f, e, a, f]).
 a
@@ -195,6 +202,7 @@ true ;
 false.
 </pre>
 
+<h5> TEST CASE 3 </h5>
 <pre>
 ?- has_triplicate([]).
 false.
@@ -207,21 +215,25 @@ removed. The number 'N'(first argument) is supplied by the user at run time. If 
 for the given list, the program returns <code>false</code> and terminates.
 
 <h3> Test Cases </h3>
+<h5> TEST CASE 1 </h5>
 <pre>
 ?- remove_nth(3, [1, 2, 3, 4, 5, 6], Y).
 Y = [1, 2, 4, 5, 6].
 </pre>
 
+<h5> TEST CASE 2 </h5>
 <pre>
 ?- remove_nth(7, [1, 2, 3, 4], Y).
 false.
 </pre>
 
+<h5> TEST CASE 3 </h5>
 <pre>
 ?- remove_nth(7, [a, b, c, d, 1, 2, 3, 4], Y).
 Y = [a, b, c, d, 1, 2, 4].
 </pre>
 
+<h5> TEST CASE 4 </h5>
 <pre>
 ?- remove_nth(7, [], Y).
 false.
@@ -233,21 +245,27 @@ false.
 remove_every_other/2 removes every even-indexed element from the list X(first argument) and puts the resultant  
 element in the list Y (second argument). The first element is always retained. Indexing starts at 1.
 
+<h3> Test Cases </h3>
+
+<h5> TEST CASE 1 </h5>
 <pre>
 ?- remove_every_other([1, 2, 3, 4, 5, 6, 7], Y).
 Y = [1, 3, 5, 7] .
 </pre>
 
+<h5> TEST CASE 2 </h5>
 <pre>
 ?- remove_every_other([a, b, c, d, e, f], Y).
 Y = [a, c, e].
 </pre>
 
+<h5> TEST CASE 3 </h5>
 <pre>
 ?- remove_every_other([a], Y).
 Y = [a]
 </pre>
 
+<h5> TEST CASE 4 </h5>
 <pre>
 ?- remove_every_other([], Y).
 Y = [].
