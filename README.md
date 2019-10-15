@@ -187,7 +187,7 @@ false.
 <pre>
 ?- has_triplicate([]).
 false.
-</pre>Nayan Khanna (2017B4A70636P)
+</pre>
 
 
 <h2> Remove_nth.pl </h2>
